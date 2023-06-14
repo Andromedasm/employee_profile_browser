@@ -13,12 +13,12 @@ RUN apt-get update && \
 WORKDIR /var/www/html
 
 # 克隆项目
-RUN git clone https://github.com/Andromedasm/employee_broswer.git && \
-    mv employee_broswer/* . && \
-    rm -rf employee_broswer
+RUN git clone https://github.com/Andromedasm/employee_profile_browser.git && \
+    mv employee_profile_browser/* . && \
+    rm -rf employee_profile_browser
 
 # 添加 Apache 配置文件
-COPY 000-default.conf /etc/apache2/sites-available/000-default.conf
+# COPY 000-default.conf /etc/apache2/sites-available/000-default.conf
 
 # 开放端口
 EXPOSE 80 443 5432
